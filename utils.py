@@ -3,12 +3,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class rgbd():
-    def __init__(self, color_path, depth_path):
+    def __init__(self, color_path, depth_path, depth_scale=3000):
         print("Read data")
         self.color_raw = o3d.io.read_image(color_path)
         self.depth_raw = o3d.io.read_image(depth_path)
         self.rgbd_image =  o3d.geometry.RGBDImage.create_from_color_and_depth(
-                            self.color_raw, self.depth_raw)
+                            self.color_raw, self.depth_raw, depth_scale=depth_scale)
 
     def show_info(self):
         print(self.rgbd_image)
@@ -31,11 +31,12 @@ class rgbd():
         pcd = o3d.geometry.PointCloud.create_from_rgbd_image(
             self.rgbd_image, 
             cam,
-            extrinsic = extrinsic_data
+            extrinsic = extrinsic_data,
         )
         # Flip it
         pcd.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
         o3d.visualization.draw_geometries([pcd])
     
+
 
 
