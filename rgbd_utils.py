@@ -36,6 +36,8 @@ class rgbd():
         # Flip it
         pcd.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
         o3d.visualization.draw_geometries([pcd])
+        return pcd
+
     
 
 
