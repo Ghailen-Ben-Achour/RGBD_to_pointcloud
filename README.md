@@ -6,7 +6,7 @@ Tutorial on how to convert RGBD into pointcloud using calibration
  This tutorial on RGBD to pointcloud is using the parallel-jaw-grasping-dataset for grqsping tasks.
  To format of the data should be as follows:
  ```plain
-└── img
+└── DATA_DIR
        ├── rgbd
        |   ├── 00000.png
        |   ├── 00001.png
@@ -23,4 +23,10 @@ Tutorial on how to convert RGBD into pointcloud using calibration
        |   ├── 00000.png
        |   ├── 00001.png
        |   └── ...
+```
+## Run script
+
+To run the RGBD to point cloud transformation, the command below should be executed:
+```bash
+python script.py --path_to_data [DATA_DIR] --filename [name_of_file]
 ```
