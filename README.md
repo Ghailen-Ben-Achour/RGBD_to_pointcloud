@@ -2,9 +2,9 @@
 Tutorial on how to convert RGBD into pointcloud using Open3d library.
 
 ## Dataset
- Dataset can be found [here](https://3dvision.princeton.edu/projects/2017/arc/#datasets)
- This tutorial on RGBD to pointcloud is using the parallel-jaw-grasping-dataset for grasping tasks.
- To format of the data should be as follows:
+ Dataset can be found [here](https://3dvision.princeton.edu/projects/2017/arc/#datasets).
+ The tutorial on RGBD to pointcloud is using the parallel-jaw-grasping-dataset for grasping tasks.
+ The format of the data should be as follows:
  ```plain
 └── DATA_DIR
        ├── rgb
