@@ -30,3 +30,12 @@ To run the RGBD to point cloud transformation, the command below should be execu
 ```bash
 python script.py --path_to_data [DATA_DIR] --filename [name_of_file]
 ```
+
+## Results
+Results for rgbd to pointcloud transformation:
+![Project Image](results/rgbd.png)
+![Project Image](results/pointcloud.png)
+Results for pointcloud filtering and noise removal:
+![Project Image](results/filtered_pointcloud.png)
+Results for clustering pointcloud:
+![Project Image](results/clusters.png)
